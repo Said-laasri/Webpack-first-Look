@@ -14,10 +14,11 @@ module.exports = {
     static: './dist',
   },
   output: {
-    filename: 'main.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
     publicPath: '/',
+    chunkFilename: '[id].[chunkhash].js',
   },
   optimization: {
     runtimeChunk: 'single',
